@@ -89,7 +89,7 @@ def set_up_user(class_graph: Graph, graph:dict):
 
 def view_ad(class_graph: Graph):
     pick = input('Do you want to view adjacency list? Yes(1)/No(2) ')
-    if pick == 1:
+    if pick == '1':
         print('---Adjacency list---')
         print()
         print(class_graph.print_adj_list())
