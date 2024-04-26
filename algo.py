@@ -44,7 +44,7 @@ def init_sssp(s):
 def dijkstra(g,source):
     init_sssp(source)
     heapq.heappush(heap,(0,source)) # insert sort
-    while heap: # heap not empty
+    while heap:  # heap not empty
         weight, origin_airport = heapq.heappop(heap)
         visited[origin_airport] = True
         for edge in g[origin_airport]:
@@ -103,11 +103,11 @@ def prompt(class_graph: Graph):
         dest = input('What is your destination airport? ')
     init_sssp(orig)
     dijkstra(graph, orig)
-    print(dist[dest])
+    distance = dist[dest]
     arr = shortest_path(orig, dest)
     ans = arr[::-1]
     print()
-    print(f'The shortest path from {orig} to {dest}')
+    print(f'The shortest path from {orig} to {dest} with total elapsed time taken {distance}')
     print(ans)
 
 
