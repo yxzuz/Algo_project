@@ -107,8 +107,8 @@ def prompt(class_graph: Graph):
     arr = shortest_path(orig, dest)
     ans = arr[::-1]
     print()
-    print(f'The shortest path from {orig} to {dest} with total elapsed time taken {distance}')
-    print(ans)
+    print(f'The shortest path from {orig} to {dest} takes {distance} minutes via flight route {ans}')
+
 
 
 if __name__ == '__main__':
